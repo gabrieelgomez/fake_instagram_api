@@ -9,6 +9,8 @@ Rails.application.routes.draw do
       resources :users
 
       resources :posts
+
+      resources :comments, only: %i[create update destroy]
     end
   end
 end
